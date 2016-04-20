@@ -1,0 +1,30 @@
+{
+  "name": "node-restful-api",
+  "version": "0.0.1",
+  "description": "A simple, RESTful api built with nodejs and expressjs, based on the scotch.io tutorial (https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stvnrlnd/node-RESTful-api.git"
+  },
+  "keywords": [
+    "api",
+    "nodejs",
+    "rest",
+    "expressjs"
+  ],
+  "author": "Steven Roland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stvnrlnd/node-RESTful-api/issues"
+  },
+  "homepage": "https://github.com/stvnrlnd/node-RESTful-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.12"
+  }
+}
