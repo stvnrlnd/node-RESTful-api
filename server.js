@@ -4,18 +4,18 @@ var bodyParser = require('body-parser');
 
 // ------ Configure the application
 var app        = express();
-var router     = express.Router();
+var api        = express.Router();
 var port       = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // ------ Build the routes
-router.get('/', function(req, res) {
+api.get('/', function(req, res) {
   res.json({ message: 'Hello, beautiful!' });
 });
 
-app.use('/api', router);
+app.use('/api', api);
 
 // ------ Serve
 app.listen(port, function(){
