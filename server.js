@@ -63,7 +63,8 @@ api.route('/users/:user_id')
                 res.json({ message: 'User updated!' });
             });
         });
-    }).delete(function(req, res) {
+    })
+    .delete(function(req, res) {
         User.remove({
             _id: req.params.user_id
         }, function(err, user) {
