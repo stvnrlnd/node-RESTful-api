@@ -49,6 +49,20 @@ api.route('/users/:user_id')
             }
             res.json(user);
         });
+    })
+    .put(function(req, res) {
+        User.findById(req.params.user_id, function(err, user) {
+            if (err){
+                res.send(err);
+            }
+            user.name = req.body.name;
+            user.save(function(err) {
+                if (err){
+                    res.send(err);
+                }
+                res.json({ message: 'User updated!' });
+            });
+        });
     });
 
 app.use('/api', api);
