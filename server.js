@@ -9,6 +9,7 @@ var app        = express();
 var api        = express.Router();
 var port       = process.env.PORT || 3000;
 var config     = require('./resource/config');
+var User     = require('./app/models/user');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
